@@ -13,7 +13,7 @@ export const Home = () => {
     return (
         <Container>
         <Grid container spacing={2} width='90vw'>
-        {products.map((product) => <Grid item xs={3}><Card product={product}/></Grid>)}  
+        {products.map((product, index) => <Grid item xs={3}><Card key={product.id} product={product}/></Grid>)}  
         </Grid> 
         
         </Container>

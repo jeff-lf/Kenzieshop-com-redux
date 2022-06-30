@@ -1,22 +1,20 @@
 import { ADD_PRODUCT, REMOVE_PRODUCT } from "./actionTypes"
 
-export const cartReducer = (state = [], action) =>{
+export const cartReducer = (state = JSON.parse(localStorage.getItem('@Cart')) || [], action) =>{
     
     
 
     switch (action.type){
         case ADD_PRODUCT:
             const { product } = action
-            
-
+    
+          
             return [...state, product]
-
+            
         case REMOVE_PRODUCT:
-            const {id} = action
+            const { cartList } = action
 
-            const newList = state.filter((product) => product.id !== id)
-
-            return newList
+            return cartList
 
         default:
             return state

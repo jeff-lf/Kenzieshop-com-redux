@@ -4,4 +4,4 @@ import { REMOVE_PRODUCT } from "./actionTypes"
 
 export const addToCart = (product) => ({type: ADD_PRODUCT, product})
 
-export const removeFromCart = (id) => ({type: REMOVE_PRODUCT, id})
+export const removeFromCart = (cartList) => ({type: REMOVE_PRODUCT,cartList})

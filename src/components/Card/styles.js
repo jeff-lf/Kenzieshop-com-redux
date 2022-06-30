@@ -5,12 +5,15 @@ export const Container = styled.div`
     height: 30vh;
     max-width: 300px;
     max-height: 400px;
-    border: 1.5px solid black;
+    border: none;
+    border-radius: 4px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    background-color: lightblue;
+    
 
     img{
         width: 100px;
